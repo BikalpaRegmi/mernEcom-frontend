@@ -6,7 +6,6 @@ import axios from '../../../axiosConfig';
 import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from '../../context/contextProvider';
 
-axios.defaults.withCredentials = true;
 
 function SignIn() {
     const[eye,setEye] = useState(true);

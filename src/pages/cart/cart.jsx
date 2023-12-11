@@ -4,7 +4,6 @@ import Buy from './buySection/Buy.jsx'
 import { LoginContext } from '../../context/contextProvider'
 import axios from '../../../axiosConfig';
 
-axios.defaults.withCredentials =true;
 
 const Cart = () => {
 const {account,setAccount} = useContext(LoginContext);

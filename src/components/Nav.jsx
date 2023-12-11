@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from '../context/contextProvider';
 import axios from '../../axiosConfig';
 
-axios.defaults.withCredentials = true;
 
 const Nav = () => {
  const [ham , setHam] = useState(true)

@@ -6,7 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from '../../context/contextProvider';
 
-axios.defaults.withCredentials = true;
 
 
 
