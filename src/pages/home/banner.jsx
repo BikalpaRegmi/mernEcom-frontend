@@ -3,15 +3,18 @@ import React, { useEffect, useState } from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
+import { ImSpinner } from "react-icons/im";
+
 
 const Banner = () => {
   const [all,setAll] = useState([]) 
+  const [loading,setLoading] = useState(true);
 
   const getAllProduct = async()=>{
    try {
      const res = await axios.get('/getAllProduct')
-       setAll(res.data)
-    
+     setAll(res.data)   
+     setLoading(false)
    } catch (error) {
     console.log('Error :', error);
    }
@@ -22,7 +25,7 @@ const Banner = () => {
   },[]) 
     return (
     <div>
-    { all.length>0 ?
+    { !loading && all.length>0 ?
          <Carousel      
          showThumbs={false}
           autoPlay = {true}
@@ -52,7 +55,7 @@ const Banner = () => {
             </Link>
             )})
         }
-         </Carousel> :''
+         </Carousel> : <ImSpinner className='animate-spin text-5xl mx-auto mt-7'/>
     }
     </div>
   )
