@@ -52,14 +52,9 @@ const getText = (e)=>{
     <>
     <ul className='flex justify-between capitalize text-[13px] font-light md:w-80 text-slate-500 w-64 underline md:mt-1 ml-3 md:ml-5'>
     
-   {
-  account ?
+  
     <li className='cursor-pointer hover:text-blue-700' onClick={() => navigate('/sellers')}>Become a seller</li>
-    :
-    <Link to={'/login'}>    
-    <li className='cursor-pointer hover:text-blue-700' onClick={() => navigate('/sellers')}>Become a seller</li>
-</Link>
-   }
+   
      <a href="https://www.imepay.com.np/#/" target='blank'> <li className='cursor-pointer hover:text-blue-700'>Payment Partner</li> </a>
       <Link to={'/help'}><li className='cursor-pointer hover:text-blue-700'>help</li></Link>
     </ul>

@@ -62,9 +62,7 @@ try {
 }
   }
 }
-useEffect(()=>{
-  console.log(document.cookie)
-},[])
+
   return (
     <>
     <div className="wrapper w-96 mt-9 mx-auto ">
