@@ -36,6 +36,7 @@ const handleChange = (event) =>{
 }
 const SignIn = async(event)=>{
   event.preventDefault();
+  console.log('Sign-in request received');
   if(inputUser.email==='' || inputUser.password==='') toast.warn('Plz fill both fields')
   else{
 
